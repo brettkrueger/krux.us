@@ -1,21 +1,44 @@
 import React from "react"
-import { Box, Grid } from "@chakra-ui/core"
+import PropTypes from "prop-types"
+import { useStaticQuery, graphql } from "gatsby"
+
 import Header from "./header"
-import Menu from "./menu"
+import "./layout.css"
 
-import "../assets/style.css"
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  return (
+    <>
+      <Header siteTitle={data.site.siteMetadata.title}/>
+      <div
+        style={{
+          margin: `0 auto`,
+          maxWidth: 960,
+          padding: `0 1.0875rem 1.45rem`,
+        }}
+      >
+        <main>{children}</main>
+        <hr />
+        <footer>
+          © {new Date().getFullYear()},
+          {` `}
+          <a href="https://krux.us">Krux Labs</a>. Powered by <a href="https://gatsbyjs.org">Gatsby.</a>
+        </footer>
+      </div>
+    </>
+  )
+}
 
-const Layout = ({ children }) => (
-  <div>
-    <Grid style={{ margin: `0 auto` }} maxW="90%" w={900} alignSelf="center">
-      <Box mb={10} mt={20}>
-        <Header />
-      </Box>
-      <Menu />
-
-      <Box mb={100}>{children}</Box>
-    </Grid>
-  </div>
-)
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
+}
 
 export default Layout

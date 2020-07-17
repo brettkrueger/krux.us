@@ -1,24 +1,43 @@
-import React from "react"
-import { Heading, Box, Grid } from "@chakra-ui/core"
 import { Link } from "gatsby"
-import GatsbyLogo from "../assets/svg/gatsby.inline.svg"
+import PropTypes from "prop-types"
+import React from "react"
 
-export default () => (
-  <Heading as="h1">
-    <Link to="/">
-      <Grid gridTemplateColumns="50px 1fr" gridGap="20px">
-        <Box maxW={50}>
-          <GatsbyLogo />
-        </Box>
-        <span
+const Header = () => (
+  <header
+    style={{
+      background: `rebeccapurple`,
+      marginBottom: `1.45rem`,
+    }}
+  >
+    <div
+      style={{
+        margin: `0 auto`,
+        maxWidth: 960,
+        padding: `1.45rem 1.0875rem`,
+      }}
+    >
+      <h1 style={{ margin: 0 }}>
+        <Link
+          to="/"
           style={{
-            transform: `translateY(5px)`,
-            display: `inline-block`,
+            color: `white`,
+            textDecoration: `none`,
           }}
         >
-          Gatsby Source WordPress V4 demo
-        </span>
-      </Grid>
-    </Link>
-  </Heading>
+          Not all who wander are lost; just most
+        </Link>
+      </h1>
+      <div class="header"><Link to="/">Home</Link> <span>|</span> <Link to="/thoughts">Thoughts</Link> <span>|</span> <Link to="/projects">Projects</Link></div>
+    </div>
+  </header>
 )
+
+Header.propTypes = {
+  siteTitle: PropTypes.string,
+}
+
+Header.defaultProps = {
+  siteTitle: ``,
+}
+
+export default Header

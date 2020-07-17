@@ -8,6 +8,12 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+    title: `Krux`,
+    description: `Tips, tricks, and everything in between-- Welcome!`,
+    tagline: `Not all who wander are lost; just most`,
+    author: `@brett_krueger`,
+  },
   plugins: [
     `gatsby-plugin-sharp`,
     {
@@ -44,7 +50,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-chakra-ui`,
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-plugin-react-svg",
