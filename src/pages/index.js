@@ -35,21 +35,18 @@ export default function Home({ data }) {
       </td>
       <td>
       <p>Terraform</p>
-      <p>Ansible</p>
       <p>ElasticSearch</p>
       <p>Various CI/CD tools (Jenkins/Branch/Bitbucket/etc.)</p>
       </td>
       <td>
       <p>Google Cloud</p>
       <p>Amazon AWS</p>
-      <p>Microsoft Azure</p>
       <p>Managed WordPress (+ headless)</p>
       </td>
       <td>
       <p>Dovecot & Exim</p>
       <p>Scrum & Agile</p>
       <p>Confluence, Jira, Zendesk & Trello</p>
-      <p>Git and CI/CD (Jenkins/Branch/Bitbucket)</p>
       </td>
       </tr>
       </table>
