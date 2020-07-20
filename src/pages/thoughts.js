@@ -15,10 +15,10 @@ export default ({ data }) => {
       <h3>My Thoughts</h3>
       {data.allWpPost.edges.map(({ node }) => (
         <div>
+          {node.date}
           <Link to={node.uri}>
             <p>{node.title}</p>
           </Link>
-          <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
         </div>
       ))}
     </Layout>
@@ -34,7 +34,10 @@ export const pageQuery = graphql`
           excerpt
           slug
           uri
+          date(formatString:"MMM DD, YYYY")
         }
       }
     }
   }`
+
+  //          <!--<div dangerouslySetInnerHTML={{ __html: node.excerpt }} />-->
