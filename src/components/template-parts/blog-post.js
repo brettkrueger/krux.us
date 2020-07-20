@@ -1,5 +1,5 @@
 import React from "react"
-
+import SEO from "../../components/seo"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../../components/layout"
@@ -11,6 +11,7 @@ function BlogPost({ data }) {
 
   return (
     <Layout>
+      <SEO title="Blog" description={title}/>
       <h1> {title} </h1>
       {!!featuredImage?.node?.remoteFile?.childImageSharp && (
         <Img fluid={featuredImage.node.remoteFile.childImageSharp.fluid} />
@@ -19,12 +20,12 @@ function BlogPost({ data }) {
 
       <br />
       {!!nextPage && (
-        <Link to={normalizePath(nextPage.uri)}>Next: {nextPage.title}</Link>
+        <Link to={normalizePath(nextPage.uri)}>Previous: {nextPage.title}</Link>
       )}
       <br />
       {!!previousPage && (
         <Link to={normalizePath(previousPage.uri)}>
-          Previous: {previousPage.title}
+          Next: {previousPage.title}
         </Link>
       )}
     </Layout>

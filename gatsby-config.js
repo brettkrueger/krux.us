@@ -13,6 +13,9 @@ module.exports = {
     description: `Tips, tricks, and everything in between-- Welcome!`,
     tagline: `Not all who wander are lost; just most`,
     author: `@brett_krueger`,
+    social: {
+      twitter: "@brett_krueger"
+    }
   },
   plugins: [
     `gatsby-plugin-sharp`,

@@ -1,10 +1,12 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 export default ({ data }) => {
   return (
     <Layout>
+      <SEO title="Thoughts"/>
       <h1><span role="img" aria-label="Memo Emoji">📝</span> Ramblings of a madman</h1>
       <h3>A Bit About Me</h3>
       <p>I grew up in a small town you may have heard of called Austin. It's smack in the middle of Texas, so it's pretty hard to miss.
