@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-
+import favicon from "../assets/images/favicon.ico"
 import Header from "./header"
 import "./layout.css"
 
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title}/>
+      <link rel="icon" href={favicon} />
       <div
         style={{
           margin: `0 auto`,
