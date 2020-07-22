@@ -9,6 +9,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
 }
+figcaption {
+  font-size: 75%;
+  text-align: center;
+  line-height: 3;
+  position: relative;
+  vertical-align: baseline;
+  top: -2em;
+}
+.wp-embedded-content {
+  border: 1px solid black;
+  padding: 5px;
+}
 article,
 aside,
 details,
