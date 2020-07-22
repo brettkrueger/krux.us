@@ -15,7 +15,7 @@ figcaption {
   line-height: 3;
   position: relative;
   vertical-align: baseline;
-  top: -2em;
+  bottom: -.25em;
 }
 .wp-embedded-content {
   border: 1px solid black;
