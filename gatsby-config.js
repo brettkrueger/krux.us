@@ -31,7 +31,7 @@ module.exports = {
       options: {
         url:
           process.env.WPGRAPHQL_URL ||
-          `https://dev-gatsby-source-wordpress-v4.pantheonsite.io/graphql`,
+          `https://krux.wpengine.com/graphql`,
         verbose: true,
         develop: {
           hardCacheMediaFiles: true,
@@ -62,6 +62,5 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify-cache`,
   ],
 }
