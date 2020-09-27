@@ -1,0 +1,13 @@
+{
+  "name": "krux.us",
+  "repo": "brettkrueger/krux.us",
+  "environments": [{
+    "name": "Development",
+    "branch": "dev",
+    "wp_environment_name": "krux",
+    "secrets": [{
+      "key": "YOUR_ENV_VAR",
+      "value": "123"
+    }]
+  }]
+}
