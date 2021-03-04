@@ -1,5 +1,7 @@
 WordPress/GraphQL
 .vscode
+wpe.json
+build
 
 # Logs
 logs
